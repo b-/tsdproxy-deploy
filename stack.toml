@@ -3,6 +3,9 @@ name = "tsdproxy"
 tags = ["tsdproxy"]
 [stack.config]
 server = "localhost"
+links = [
+  "https://komodo.shark-perch.ts.net/resource-syncs/682c2da31fdb036196a27889"
+]
 poll_for_updates = true
 auto_update = true
 auto_update_all_services = true
