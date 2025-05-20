@@ -1,1 +1,22 @@
-## Add resources to get started
+[[stack]]
+name = "tsdproxy"
+tags = ["tsdproxy"]
+[stack.config]
+server = "localhost"
+poll_for_updates = true
+auto_update = true
+auto_update_all_services = true
+git_account = "b-"
+repo = "b-/tsdproxy-deploy"
+
+##
+
+[[resource_sync]]
+name = "tsdproxy-deploy"
+tags = ["tsdproxy"]
+[resource_sync.config]
+repo = "b-/tsdproxy-deploy"
+git_account = "b-"
+resource_path = ["stack.toml"]
+managed = true
+match_tags = ["tsdproxy"]
